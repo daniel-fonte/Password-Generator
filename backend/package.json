@@ -5,7 +5,30 @@
   "author": "daniel-fonte",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
-    "jest": "^26.0.1"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.4"
+  },
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(*test).js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
