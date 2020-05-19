@@ -1,0 +1,11 @@
+{
+  "name": "@password/backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "daniel-fonte",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.0.1"
+  }
+}

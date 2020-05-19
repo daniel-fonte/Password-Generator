@@ -1,0 +1,11 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/daniel-fonte/Password-Generator.git",
+  "author": "daniel-fonte",
+  "license": "MIT",
+  "dependencies": {
+    "lerna": "^3.21.0"
+  }
+}
