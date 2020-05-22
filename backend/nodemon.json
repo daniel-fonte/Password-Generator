@@ -1,0 +1,9 @@
+{
+    "verbose": true,
+    "ignore": [
+        "*.test.js"
+    ],
+    "execMap": {
+      "js": "sucrase-node"
+    }
+  }

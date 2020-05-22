@@ -8,13 +8,17 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-jest": "^23.13.1",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
-    "lint-staged": "^10.2.4"
+    "lint-staged": "^10.2.4",
+    "nodemon": "^2.0.4",
+    "sucrase": "^3.15.0"
   },
   "scripts": {
     "dev": "nodemon ./src/index.js",
