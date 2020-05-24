@@ -12,7 +12,7 @@ module.exports = {
   // cacheDirectory: "C:\\Users\\RaquelTimm\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls and instances between every test
-  // clearMocks: false,
+  clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -138,10 +138,10 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  // testMatch: [
-  //   "**/__tests__/**/*.[jt]s?(x)",
+  testMatch: [
+    '**/__tests__/**/*.test.js?(x)',
   //   "**/?(*.)+(spec|test).[tj]s?(x)"
-  // ],
+  ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

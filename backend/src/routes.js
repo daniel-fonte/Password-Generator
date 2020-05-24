@@ -62,7 +62,9 @@ routes.post('/', (req, res) => {
       return password;
     };
 
-    return res.json({ password: suffle(possibles, Length) });
+    const password = suffle(possibles, Length).toString();
+
+    return res.json({ password });
   } catch (error) {
     return res.json({ error });
   }
