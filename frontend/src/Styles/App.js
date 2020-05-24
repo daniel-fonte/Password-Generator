@@ -5,6 +5,7 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 50%;
+	margin-top: 50px;
 `;
 
 export default Container;
