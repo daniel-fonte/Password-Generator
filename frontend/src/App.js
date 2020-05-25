@@ -11,21 +11,24 @@ function App() {
 	const [theme, setTheme] = useState({});
 	const [password, setPassword] = useState('');
 	const [lengthInput, setLengthInput] = useState(10);
-	const [uppercaseInput, setUppercaseInput] = useState(false);
-	const [numbersInput, setNumbersInput] = useState(false);
-	const [symbolsInput, setSymbolsInput] = useState(false);
 
 	function handleSubmit(event) {
+		const form = event.target;
 		event.preventDefault();
 
 		api.post('/', {
 			Length: lengthInput,
-			Uppercase: uppercaseInput,
-			Numbers: numbersInput,
-			Symbols: symbolsInput,
-		})
-			.then((res) => setPassword(res.data.password))
-			.catch(() => setPassword('Error: Try Again'));
+			Uppercase: form[1].checked,
+			Numbers: form[2].checked,
+			Symbols: form[3].checked,
+		}).then((res) => setPassword(res.data.password))
+			.catch((err) => setPassword(err.message));
+	}
+
+
+	function copyToClipboard() {
+		document.getElementById('password').select();
+		document.execCommand('copy');
 	}
 
 	return (
@@ -36,7 +39,23 @@ function App() {
 				<Container>
 					<div className="passwordBox">
 						<h1>Password Generator</h1>
-						<input type="text" placeholder="Password" value={password} />
+						<div className="passwordLine">
+							<input
+								type="text"
+								placeholder="Password"
+								value={password}
+								id="password"
+								readOnly
+							/>
+							{
+								password !== '' ? (
+									<button type="button" onClick={copyToClipboard}>
+										<img src="https://img.icons8.com/metro/26/000000/clipboard.png" alt="Copy Icon" />
+									</button>
+								)
+									: null
+							}
+						</div>
 					</div>
 					<div className="passwordOptions">
 						<form onSubmit={(event) => handleSubmit(event)} className="passwordForm">
@@ -48,6 +67,7 @@ function App() {
 										placeholder="Password Length"
 										value={lengthInput}
 										onChange={(event) => setLengthInput(event.target.value)}
+										min="3"
 										required
 									/>
 								</label>
@@ -58,8 +78,8 @@ function App() {
 										type="radio"
 										id="uppercase"
 										name="checkbox"
-										defaultChecked={uppercaseInput}
-										onChange={(event) => setUppercaseInput(event.target.checked)}
+										defaultChecked
+										value="uppercase"
 									/>
 									<span className="checkbox-shadow" />
 								</label>
@@ -71,8 +91,7 @@ function App() {
 										type="radio"
 										id="numbers"
 										name="checkbox"
-										defaultChecked={numbersInput}
-										onChange={(event) => setNumbersInput(event.target.checked)}
+										value="numbers"
 									/>
 									<span className="checkbox-shadow" />
 
@@ -85,8 +104,7 @@ function App() {
 										type="radio"
 										id="symbols"
 										name="checkbox"
-										defaultChecked={symbolsInput}
-										onChange={(event) => setSymbolsInput(event.target.checked)}
+										value="symbols"
 									/>
 									<span className="checkbox-shadow" />
 								</label>

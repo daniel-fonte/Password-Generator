@@ -21,12 +21,27 @@ const Container = styled.div`
 		font-weight: bold;
 	}
 
-	.passwordBox input {
+	.passwordLine {
 		width: 80%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.passwordLine input {
+		width: 100%;
 		border: 1px solid #000;
 		border-radius: 10px;
 		padding: 10px;
 		margin-top: 10px;
+	}
+
+	.passwordLine button {
+		cursor: pointer;
+		background-color: #03a9f4;
+		border-radius: 5px;
+		border: 1px solid #000;
+		margin-left: 10px;
+		padding: 5px;
 	}
 
 	.passwordOptions {
