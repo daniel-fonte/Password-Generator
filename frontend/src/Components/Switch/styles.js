@@ -31,10 +31,25 @@ const Container = styled.div`
 		top: 1px;
 		left: 2px;
 		transition: all .4s;
+		z-index: 1000;
 	}
 
 	input:checked + span {
 		left: 40px ;
+	}
+
+	.sunIcon, .moonIcon {
+		position: absolute;
+		top: 3px;
+		z-index: 0;
+	}
+
+	.sunIcon {
+		left: 2px;
+	}
+
+	.moonIcon {
+		right: 2px;
 	}
 `;
 

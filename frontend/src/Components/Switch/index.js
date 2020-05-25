@@ -26,6 +26,16 @@ const Switch = (props) => {
 
 				/>
 				<span className="slider" />
+				<img
+					src="https://img.icons8.com/emoji/30/000000/sun-emoji.png"
+					alt="light theme icon"
+					className="sunIcon"
+				/>
+				<img
+					src="https://img.icons8.com/dusk/30/000000/new-moon.png"
+					alt="dark theme icon"
+					className="moonIcon"
+				/>
 			</label>
 		</Container>
 	);
