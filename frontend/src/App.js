@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -7,14 +7,13 @@ import Container from './Styles/App';
 import GlobalStyles from './Styles/GlobalStyles';
 
 function App() {
+	const [theme, setTheme] = useState({});
 	return (
 		<>
-			<Switch />
-			<ThemeProvider theme={{ mode: 'light' }}>
+			<Switch alteredTheme={setTheme} />
+			<ThemeProvider theme={theme}>
 				<GlobalStyles />
-				<Container>
-					<h1>oi</h1>
-				</Container>
+				<Container />
 			</ThemeProvider>
 		</>
 	);
