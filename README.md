@@ -34,7 +34,7 @@ Programming language
 1. Clone this repo using: `git clone https://github.com/daniel-fonte/Password-Generator`
 2. Move yourself to the appropriate directory: `cd Password-Generator`
 3. Run `yarn` on folder to install dependencies
-4. Run 'yarn run lerna bootstrap' to install the packages dependencies
+4. Run `yarn run lerna bootstrap` to install the packages dependencies
 
 ### Getting stared frontend app
 1. Move yourself to the frontend folder: `cd frontend`
