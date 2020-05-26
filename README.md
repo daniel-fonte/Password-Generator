@@ -17,7 +17,7 @@
         JavaScript environment to server-side execution
     </li> 
     <li>
-      <strong><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fjestjs.io%2Fdocs%2Fen%2Fmanual-mocks&psig=AOvVaw2RYh6wjZMoKnI03OSF-8kN&ust=1590596886149000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKirgKf50ekCFQAAAAAdAAAAABAD"> JEST - </strong> 
+      <strong><img src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/5894313931548218185-512.png" width="24px" /> JEST - </strong> 
       A JavaScript Testing Framework 
     </li>
   <li> 
