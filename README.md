@@ -1,6 +1,3 @@
-<p align="center">
-<img src="./src/Media/img/logo.png" width="300" height="300" />
-
 </p>
 <h1 align="center">Password Generator</h1></br>
 <p align="center">
@@ -8,7 +5,7 @@
 </p><br/>
 
 <p align="center">
-  <img src="https://gph.is/g/Zxolg5O" />
+  <img src="https://media.giphy.com/media/LpLFlN5QWYx5erXHaT/giphy.gif" />
 </p>
 
 <h2>Technology </h2>
